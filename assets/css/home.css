@@ -1,3 +1,61 @@
-body{
+body {
+    margin-left: 400px;
+    margin-top: 50px;
+    
+}
+.heading {
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 50px;
+    
+}
+.head {
+    margin-bottom: 2rem;
+    display: flex;
+    border: 2px solid rgb(72, 46, 46);
+    width: 46rem;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+}
+.contact {
+    
+    border: 1px solid white;
+    background-color: cadetblue;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    color: white;
+    width: 30vw;
+    display: flex;
+
+}
+.contact .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.contact .delete-button {
+    width: 10%;
+    padding: 3px;
+}
+formbt {
+    border-color: 2px solid black;
+}
+.bt1 {
+    height: 2rem;
+    width: 8rem;
+    font-size: 1rem;
+    
+}
+.bt2 {
+    height: 2rem;
+    width: 7rem;
+    font-size: 1rem;
+}
+.bt3 {
+    height: 2rem;
+    width: 7rem;
+    font-size: 1rem;
 }

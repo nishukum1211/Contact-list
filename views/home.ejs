@@ -1,4 +1,5 @@
 <html>
+    <h1 class="heading">My Contacts List</h1>
     <head>
         <title>
             <%= locals.title%>
@@ -7,30 +8,36 @@
     </head>
     <body>
 
-        <div>
+        <div class="head">
             <ul>
                    
                 <% for (let i of contact_list ) { %> 
                    <div class="contact"> 
-                        <li>
-                            <p><%= i.name %></p>
-                            <p><%= i.phone %></p>
-                        </li>
+                        <div class="details">
+                            <ol>
+                                <p><%= i.name %></p>
+                                <p><%= i.phone %></p>
+                            </ol>
+                        </div>
+                        <div class="delete-button">
+                            <a href="/delete-contact/?id=<%= i.id %>">
+                                delete
+                            </a>
+                        </div>
                     </div>
-                    <div class="delete-button">
-                        <a href="/delete-contact/?id=<%= i.id %>">
-                            delete
-                        </a>
-                    </div>
+                    
                 <% } %>
             </ul>
         </div>
+        <br />
+            <form action="/create-contact" method="POST">
+                <input type="text" name="name" class="bt1" placeholder="Enter name" required>
+                <input type="number" name="phone" class="bt2" placeholder="Enter phone" required>
+                <button type="submit" class="bt3">Add contact</button>
+            </form>
 
-        <form action="/create-contact" method="POST">
-            <input type="text" name="name" placeholder="Enter name" required>
-            <input type="number" name="phone" placeholder="Enter phone" required>
-            <button type="submit">Add contact</button>
-        </form>
+         
+        
         <script type="text/javascript" src="/js/home.js"></script>
     </body>
 </html>
